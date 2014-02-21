@@ -1,6 +1,9 @@
 Breadcrumb Plugin for Morfy CMS
 ===============================
 
+Configuration
+-------------
+
 Place the `breadcrumb` folder with its contents in `plugins` folder. Then update your `config.php` file:
 
     <?php
