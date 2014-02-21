@@ -1,0 +1,26 @@
+Update your `config.php` file!
+------------------------------
+
+<?php
+    return array(
+
+        ...
+        ...
+        ...
+
+        'plugins' => array(
+            'markdown',
+            'sitemap',
+            'breadcrumb' // <= Activation
+        ),
+        'breadcrumb_config' => array( // <= Configuration
+            'classes' => array( // <= List of item's HTML classes
+                'item' => 'item',
+                'current' => 'active'
+            ),
+            'labels' => array( // <= List of item's readable text or labels
+                'home' => 'Home'
+            ),
+            'divider' => ' <span class="divider">/</span> '
+        )
+    );
