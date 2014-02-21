@@ -1,0 +1,10 @@
+/* If you are using Bootstrap, there is nothing to do with this file */
+.breadcrumb {margin-bottom:1.7em}
+.breadcrumb .divider {
+  color:#ccc;
+  padding:0 5px;
+}
+
+/* For default theme only. Remove this declarations if you don't need */
+.breadcrumb {margin:80px 30px 15px}
+#wrap > .breadcrumb + .container {padding-top:0}
