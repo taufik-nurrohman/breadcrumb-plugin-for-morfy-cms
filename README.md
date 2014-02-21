@@ -35,3 +35,5 @@ Add this snippet to your `navbar.html` that is placed in the `themes` folder to 
     <nav class="breadcrumb">
       <?php Morfy::factory()->runAction('breadcrumb'); ?>
     </nav>
+
+Done.
