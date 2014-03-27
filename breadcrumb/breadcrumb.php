@@ -7,7 +7,7 @@
  * @subpackage Plugins
  * @author Taufik Nurrohman <http://latitudu.com>
  * @copyright 2014 Romanenko Sergey / Awilum
- * @version 1.0.0
+ * @version 1.0.1
  *
  */
 
@@ -32,8 +32,7 @@ Morfy::factory()->addAction('breadcrumb', function() {
 
     for($i = 0; $i < $total_paths; $i++) {
         $lift .= '/' . $paths[$i];
-        error_reporting(0);
-        $data = Morfy::factory()->getPage($lift);
+        $data = Morfy::factory()->getPage(file_exists(CONTENT_PATH . '/' . $lift . '/index.md') || file_exists(CONTENT_PATH . '/' . $lift . '.md') ? $lift : '404');
         if($i < $total_paths - 1) {
             $html .= $config['divider'] . '<a class="' . $config['classes']['item'] . '" href="' . Morfy::$config['site_url'] . $lift . '">' . $data['title'] . '</a>';
         } else {
