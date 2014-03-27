@@ -32,6 +32,7 @@ Morfy::factory()->addAction('breadcrumb', function() {
 
     for($i = 0; $i < $total_paths; $i++) {
         $lift .= '/' . $paths[$i];
+        error_reporting(0);
         $data = Morfy::factory()->getPage($lift);
         if($i < $total_paths - 1) {
             $html .= $config['divider'] . '<a class="' . $config['classes']['item'] . '" href="' . Morfy::$config['site_url'] . $lift . '">' . $data['title'] . '</a>';
