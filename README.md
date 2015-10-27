@@ -4,39 +4,26 @@ Breadcrumb Plugin for Morfy CMS
 Configuration
 -------------
 
-Place the `breadcrumb` folder with its contents in `plugins` folder. Then update your `config.php` file:
+1. Put the `breadcrumb` folder to the `plugins` folder
+2. Go to `config\site.yml` and add `breadcrumb` to the plugins section:
+3. Save your changes.
 
-    <?php
-        return array(
-    
-            ...
-            ...
-            ...
-    
-            'plugins' => array(
-                'markdown',
-                'sitemap',
-                'breadcrumb' // <= Activation
-            ),
-            'breadcrumb_config' => array( // <= Configuration
-                'classes' => array( // <= List of item's HTML classes
-                    'item' => 'item',
-                    'current' => 'active'
-                ),
-                'labels' => array( // <= List of item's readable text or labels
-                    'home' => 'Home'
-                ),
-                'divider' => ' <span class="divider">/</span> '
-            )
-        );
+~~~ .yml
+# Site Plugins
+plugins:
+  breadcrumb
+~~~
 
 Usage
 -----
 
-Add this snippet to your `navbar.html` that is placed in the `themes` folder to show the breadcrumb navigation:
+Add this snippet to your `navbar.tpl` that is placed in the `themes` folder to show the breadcrumb navigation:
 
-    <nav class="breadcrumb">
-      <?php Morfy::factory()->runAction('breadcrumb'); ?>
-    </nav>
+~~~ .html
+...
+<nav class="breadcrumb">
+  {Morfy::runAction('breadcrumb')}
+</nav>
+~~~
 
 Done.
