@@ -1,7 +1,7 @@
 {if $home === true}
-  <span class="item current">{$config.labels.home}</span>
+  <span class="item current">{$config.plugins.breadcrumb.labels.home}</span>
 {else}
-  <a class="item" href="{$home}">{$config.labels.home}</a>
+  <a class="item" href="{$home}">{$config.plugins.breadcrumb.labels.home}</a>
 {/if}
 {foreach $branch as $k => $v}
   <span class="divider">/</span>

@@ -5,11 +5,10 @@ Configuration
 -------------
 
 1. Put the `breadcrumb` folder to the `plugins` folder
-2. Go to `config\site.yml` and add `breadcrumb` to the plugins section:
+2. Go to `config\system.yml` and add `breadcrumb` to the plugins section:
 3. Save your changes.
 
 ~~~ .yml
-# Site Plugins
 plugins:
   breadcrumb
 ~~~
@@ -22,7 +21,7 @@ Add this snippet to your `navbar.tpl` that is placed in the `themes` folder to s
 ~~~ .html
 ...
 <nav class="breadcrumb">
-  {Morfy::runAction('breadcrumb')}
+  {Action::run('breadcrumb')}
 </nav>
 ~~~
 
