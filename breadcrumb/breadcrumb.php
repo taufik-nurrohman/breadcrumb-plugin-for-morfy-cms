@@ -7,7 +7,7 @@
  * @subpackage Plugins
  * @author Taufik Nurrohman <http://latitudu.com>
  * @copyright 2014 Romanenko Sergey / Awilum
- * @version 2.1.0
+ * @version 2.1.1
  *
  */
 
@@ -37,7 +37,7 @@ Action::add('breadcrumb', function() {
     for($i = 0; $i < $total_paths; $i++) {
         $lift .= '/' . $paths[$i];
         $page = Pages::getPage(File::exists(STORAGE_PATH . '/pages/' . $lift . '/index.md') || File::exists(STORAGE_PATH . '/pages/' . $lift . '.md') ? $lift : '404');
-        $data[Url::getbase() . $lift] = array(
+        $data[Url::getBase() . $lift] = array(
             'title' => $page['title'],
             'current' => Url::getCurrent() === Url::getBase() . $lift
         );

@@ -4,7 +4,7 @@ labels:
 
 # Plugin metadata
 name: Breadcrumb
-version: 2.1.0
+version: 2.1.1
 description: "Provides breadcrumb navigation for blog."
 author:
   name: Taufik Nurrohman
